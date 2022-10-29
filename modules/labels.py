@@ -9,5 +9,4 @@ label = QLabel("_")
 #
 label.setFont(font1)
 #
-def showlabel():
-    main_VLayout.addWidget(label, alignment= Qt.AlignRight)
+main_VLayout.addWidget(label, alignment= Qt.AlignRight)

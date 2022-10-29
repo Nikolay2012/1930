@@ -12,5 +12,4 @@ win.setWindowTitle("Calculator")
 #
 win.resize(300, 400)
 #
-def set_layouts():
-    win.setLayout(main_VLayout)
+win.setLayout(main_VLayout)

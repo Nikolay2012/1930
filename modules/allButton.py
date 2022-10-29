@@ -4,13 +4,11 @@ from PyQt5.QtWidgets import (
 from modules.allLayouts import list_HLayout, main_VLayout
 from modules.lists import *
 #
-def create_number_button():
-    for count in range(10):
-        list_number_button.append(QPushButton(str(count)))
+for count in range(10):
+    list_number_button.append(QPushButton(str(count)))
 #
-def create_symbol_button():
-    for symbol in list_name_symbol:
-        list_symbol_button.append(QPushButton(symbol))
+for symbol in list_name_symbol:
+    list_symbol_button.append(QPushButton(symbol))
 #
 def sort_button():
     #
@@ -44,7 +42,17 @@ def show_buttons():
         index = list_buttons.index(el)
         #
         for button in el:
+            # button.setMaximumWidth(50)
             list_HLayout[index].addWidget(button)
+    # 
+    # list_symbol_button[-1].setMaximumWidth(50)
+    # list_symbol_button[-2].setMaximumWidth(50)
+    # list_number_button[0].setMaximumWidth(110)
+    list_HLayout[-1].addWidget(list_number_button[0])
+    list_HLayout[-1].addWidget(list_symbol_button[-1])
+    list_HLayout[-1].addWidget(list_symbol_button[-2])
     #
     for count in list_HLayout:
         main_VLayout.addLayout(count)
+
+

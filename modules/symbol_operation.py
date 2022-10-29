@@ -1,5 +1,4 @@
 from modules.labels import label
-from modules.lists import list_function
 #
 number = ""
 def add_symbol(symbol):

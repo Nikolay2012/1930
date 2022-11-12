@@ -42,12 +42,8 @@ def show_buttons():
         index = list_buttons.index(el)
         #
         for button in el:
-            # button.setMaximumWidth(50)
             list_HLayout[index].addWidget(button)
     # 
-    # list_symbol_button[-1].setMaximumWidth(50)
-    # list_symbol_button[-2].setMaximumWidth(50)
-    # list_number_button[0].setMaximumWidth(110)
     list_HLayout[-1].addWidget(list_number_button[0])
     list_HLayout[-1].addWidget(list_symbol_button[-1])
     list_HLayout[-1].addWidget(list_symbol_button[-2])

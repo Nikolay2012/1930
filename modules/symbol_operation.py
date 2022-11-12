@@ -9,14 +9,29 @@ def add_symbol(symbol):
         if symbol not in list_name_symbol:
             number += str(symbol)
             label.setText(number)
-    if symbol in list_arithmetic_operation:
+    if symbol in list_arithmetic_operation and number != "":
         list_input.append(number)
         number = ""
         list_input.append(symbol)
     if symbol == "=" and len(list_input) == 2:
         list_input.append(number)
-        number = arithmeticsOperation()
-        label.setText(str(number))
+        number = str(arithmeticsOperation())
+        label.setText(number)
+        list_input.clear()
+    if symbol == "AC":
+        list_input.clear()
+        number = "_"
+        label.setText(number)
+        number = ""
+#
+def add_AC():
+    add_symbol("AC") 
+#
+def add_division():
+    add_symbol("÷")
+# 
+def add_multiplication():
+    add_symbol("x")        
 #
 def add_minus():
     add_symbol("-")

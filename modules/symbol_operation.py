@@ -17,12 +17,31 @@ def add_symbol(symbol):
         list_input.append(number)
         number = str(arithmeticsOperation())
         label.setText(number)
+        if "C" in number:
+            number = list_input[0]
         list_input.clear()
     if symbol == "AC":
         list_input.clear()
         number = "_"
         label.setText(number)
         number = ""
+    if symbol == "+/-" and number != "" and number != "0" and number != "0.0":
+        number = float(number) * -1
+        number = str(number)
+        label.setText(number)
+    if symbol == ",":
+        if number == "":
+            number = 0
+        number = float(number)
+        number = str(number)
+        label.setText(number)
+
+#       
+def add_float():
+    add_symbol(",")
+#    
+def add_plusminus():
+    add_symbol("+/-")
 #
 def add_AC():
     add_symbol("AC") 

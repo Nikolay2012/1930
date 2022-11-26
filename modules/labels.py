@@ -10,3 +10,9 @@ label = QLabel("_")
 label.setFont(font1)
 #
 main_VLayout.addWidget(label, alignment= Qt.AlignRight)
+
+label.setStyleSheet(
+        '''
+            color: rgb(225, 225, 225);
+        '''
+    )

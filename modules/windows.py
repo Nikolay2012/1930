@@ -13,3 +13,4 @@ win.setWindowTitle("Calculator")
 win.resize(300, 400)
 #
 win.setLayout(main_VLayout)
+win.setStyleSheet("background-color: rgb(80,80,80);")

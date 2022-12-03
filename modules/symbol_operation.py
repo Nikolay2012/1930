@@ -13,7 +13,7 @@ def add_symbol(symbol):
         list_input.append(number)
         number = ""
         list_input.append(symbol)
-    if symbol == "=" and len(list_input) == 2:
+    if symbol == "=" and len(list_input) >= 2:
         list_input.append(number)
         number = str(arithmeticsOperation())
         label.setText(number)
@@ -35,7 +35,18 @@ def add_symbol(symbol):
         number = float(number)
         number = str(number)
         label.setText(number)
-
+    if symbol == "%" and len(list_input) == 2:
+        number = str(arithmeticsOperation())
+        list_input[0] = number
+        label.setText(number)
+    if symbol == "%" and list_input[0] != "":
+        number = float(list_input[2]) / 100
+        number = str(number)
+        list_input[2] = number
+        label.setText(number)
+    
+def add_percent():
+    add_symbol("%")
 #       
 def add_float():
     add_symbol(",")

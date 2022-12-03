@@ -8,4 +8,4 @@ list_name_symbol = ["AC", "+/-", "%", "÷", "x", "-", "+", "=", ","]
 # 
 list_input = []
 #
-list_arithmetic_operation = ["+", "-", "x", "÷"]
+list_arithmetic_operation = ["+", "-", "x", "÷", "%"]
